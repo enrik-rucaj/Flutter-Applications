@@ -1,1 +1,1 @@
-.
+Questo è il mio repository.
