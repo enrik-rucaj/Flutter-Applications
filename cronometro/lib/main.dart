@@ -13,11 +13,10 @@ class Cronometro extends StatefulWidget {
 class _CronometroState extends State<Cronometro> {
   StreamSubscription _subscription;
   
+  List<String> _stringSegnalibro = [];
   IconData _bottoneSinistro = Icons.play_arrow;
-  IconData _iconaBookmarkButton = null;
   Color _coloreBookmarkButton = Colors.grey[700];
-  String _writeBookmark = '';
-  String _writeSecondi = '00:00';
+  String _writeTempo = '00:00';
   bool _cronometroAttivo = false;
   bool _inPausa = false;
 
@@ -47,18 +46,16 @@ class _CronometroState extends State<Cronometro> {
 
   void reset() {
     _subscription.cancel();
-    _writeSecondi = '00:00';
+    _writeTempo = '00:00';
+    _stringSegnalibro.clear();
     _bottoneSinistro = Icons.play_arrow;
     _cronometroAttivo = false;
     _coloreBookmarkButton = Colors.grey[700];
-    _iconaBookmarkButton = null;
-    _writeBookmark = '';
     _inPausa = false;
   }
 
   void segnalibro() {
-    _iconaBookmarkButton = Icons.bookmark;
-    _writeBookmark = _writeSecondi;
+    _stringSegnalibro.add(_writeTempo);
   }
 
   @override
@@ -79,25 +76,33 @@ class _CronometroState extends State<Cronometro> {
               backgroundColor: Colors.blueGrey[600],
               foregroundColor: Colors.black,
               radius: 100.0,
-              child: Text(_writeSecondi,
+              child: Text(_writeTempo,
                 textScaleFactor: 3.0,
               ),
             ),
             SizedBox(height: 30.0),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Icon(_iconaBookmarkButton,
-                  color: Colors.white54,
-                ),
-                Text(_writeBookmark,
-                  textScaleFactor: 1.8,
-                  style: TextStyle(
-                    color: Colors.white54,
-                  ),
-                )
-              ],
+            Expanded(
+              child: ListView.builder (
+                itemCount: _stringSegnalibro.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return new Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.bookmark,
+                        color: Colors.white54,
+                      ),
+                      Text(_stringSegnalibro[index],
+                        textScaleFactor: 1.8,
+                        style: TextStyle(
+                          color: Colors.white54,
+                        ),
+                      )
+                    ],
+                  ); 
+                },            
+              ),
             ),
+            SizedBox(height: 80.0),
           ],
         ),
       ),
@@ -114,13 +119,13 @@ class _CronometroState extends State<Cronometro> {
                     int secondi = value % 60;
 
                     if(minuti < 10 && secondi < 10)
-                      _writeSecondi = '0$minuti:0$secondi';
+                      _writeTempo = '0$minuti:0$secondi';
                     if(minuti < 10 && secondi >= 10)
-                      _writeSecondi = '0$minuti:$secondi';
+                      _writeTempo = '0$minuti:$secondi';
                     if(minuti >= 10 && secondi <10)
-                      _writeSecondi = '$minuti:0$secondi';
+                      _writeTempo = '$minuti:0$secondi';
                     if(minuti >= 10 && secondi >= 10)
-                      _writeSecondi = '$minuti:$secondi';
+                      _writeTempo = '$minuti:$secondi';
                   });
                 });
               }

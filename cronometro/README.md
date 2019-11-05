@@ -13,11 +13,11 @@ Ciascuno dei bottoni contiene delle funzioni di controllo del cronometro:
 I text widget invece servono a:
 
 - **_Primo Text Widget_**: E' quello principale e serve principalmente a mostrare a schermo il tempo che è passato dall'avvio del cronometro.
-- **_Secondo Text Widget_**: Inizialmente è invisibile, verrà mostrato a schermo una volta che si preme il *Secondo Bottone*.
+- **_Secondo Text Widget_**: Più precisamente una **lista** di Text Widget, inizialmente è invisibile, verrà mostrato a schermo una volta che si preme il *Secondo Bottone*.
 
 ### -Idea Base:
 
-L'idea base per il funzionamento del cronometro consisteva nell'usare il metodo: `Stream.periodic(Duration(seconds: 1), transfolorm);` per incrementare il cronometro di 1 ogni secondo.
+L'idea base per il funzionamento del cronometro consisteva nell'usare il metodo: `Stream.periodic(Duration(seconds: 1), transform);` per incrementare il cronometro di 1 ogni secondo.
 
 E usare in futuro la classe StreamSubscription ( `StreamSubscription _subscription = incrementa().listen((value)` ) in modo da usare i suoi tre metodi `.pause()`, `.resume()` e `.cancel()` per controllare il flusso degli eventi nello Stream.
 
@@ -37,7 +37,7 @@ E usare in futuro la classe StreamSubscription ( `StreamSubscription _subscripti
 	- viene cambiata l'icona del primo bottone.
 	- con `_inPausa = false;` viene fatto in modo che se il primo bottone viene ricliccato allora viene chiamato il metodo _pausaCronometro()_.
 - **`void reset()`** : lo stream smette di acquisire gli eventi e tutte le variabili ritornano al loro stato iniziale.
-- **`void segnalibro()`** : viene mostrata un'icona e un testo a schermo che rappresentano quello che accade quando viene premuto il **_Secondo bottone_**.
+- **`void segnalibro()`** : viene salvato il tempo (nel momento in cui viene premuto **_Secondo bottone_**) in una lista (quest'ultima mostrerà in automatico i suoi elmenti a schermo grazie ad un Widget ListView).
 
 ### - Rappresentazione tempo: 
 
@@ -56,5 +56,5 @@ Attraverso una serie di if (i quali si trovano nel onPressed del primo bottone) 
 Viene fatta uso del widget principale Scaffold contente:
 
 - Come appBar il widget AppBar.
-- Come body il widget principale Column (con dentro un CircleAvatar e una Row)
+- Come body il widget principale Column (con dentro un CircleAvatar e una ListView).
 - Come floatingActionButton un widget Row (contenente tre widget FloatinActionButton).
