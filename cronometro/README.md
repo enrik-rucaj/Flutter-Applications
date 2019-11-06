@@ -17,7 +17,7 @@ I text widget invece servono a:
 
 ### -Idea Base:
 
-L'idea base per il funzionamento del cronometro consisteva nell'usare il metodo: `Stream.periodic(Duration(seconds: 1), transform);` per incrementare il cronometro di 1 ogni secondo.
+L'idea base per il funzionamento del cronometro consisteva nell'usare il metodo: `Stream.periodic(Duration(milliseconds: 10), transform);` per incrementare il cronometro di 1 secondo ogni 100 centisecondi.
 
 E usare in futuro la classe StreamSubscription ( `StreamSubscription _subscription = incrementa().listen((value)` ) in modo da usare i suoi tre metodi `.pause()`, `.resume()` e `.cancel()` per controllare il flusso degli eventi nello Stream.
 
@@ -26,7 +26,7 @@ E usare in futuro la classe StreamSubscription ( `StreamSubscription _subscripti
 - **`Stream<int> incrementa()`** : 
 	- con `_cronometroAttivo = true;` viene fatto in modo che se lo stesso bottone che chiama questo metodo viene ripremuto, allora possono essere chiamati solo i metodi *pausaCronometro()* o *riprendiCronometro()*, **ma il cronometro non può ripartire dall'inizio richiamando _incrementa( )_**.
 	- viene cambiato il colore del bottone centrale indicando che può essere premuto.
-	- e infine il metodo restituisce uno stream contenente una serie di eventi prodotti ogni secondo.
+	- e infine il metodo restituisce uno stream contenente una serie di eventi prodotti ogni 10 millisecondi.
 - **`void cambiaIcona()`** : viene cambiato l'icona del primo bottone, l'unica istruzione presente in questo metodo inizialmente venne tolta dal metodo *incrementa()* dopo che si è accorti che l'icona veniva cambiata con un ritardo di un secondo dopo essere premuta e non immediatamente.
 - **`void pausaCronometro()`** : 
 	- Lo stream a cui è collegato il metodo _incrementa()_ mette in pausa i suoi eventi.
@@ -41,15 +41,11 @@ E usare in futuro la classe StreamSubscription ( `StreamSubscription _subscripti
 
 ### - Rappresentazione tempo: 
 
-Il tempo in minuti e secondi viene rappresnetato da due variabili "locali": minuti e secondi.
+Il tempo in minuti, secondi e centosecondi viene rappresentato da tre variabili "locali" create nel metodo della proprietà onPressed del primo floatingActionButton.
 
-*value* : è il valore che rappresenta l'evento nello stream, più precisamente esso rappresenta il totale dei secondi del tempo trascorso.
+*value* : è il valore che rappresenta l'evento preso dallo stream (un intero maggiore di 0).
 
-*minuti* : comprende la parte intera del quoziente ottenuto.
-
-*secondi* : comprende il resto ottenuto.
-
-Attraverso una serie di if (i quali si trovano nel onPressed del primo bottone) viene deciso se la stringa *_writeSecondi* deve stampare a schermo un minuto/secondo senza lo '0' davanti oppure con lo '0'.
+Attraverso una serie di if (i quali si trovano nel onPressed del primo bottone) viene deciso se la stringa *_writeSecondi* deve stampare a schermo un minuto/secondo/centosecondo senza lo '0' davanti oppure con lo '0'.
 
 ### - Grafica:
 

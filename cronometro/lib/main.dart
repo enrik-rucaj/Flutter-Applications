@@ -16,7 +16,7 @@ class _CronometroState extends State<Cronometro> {
   List<String> _stringSegnalibro = [];
   IconData _bottoneSinistro = Icons.play_arrow;
   Color _coloreBookmarkButton = Colors.grey[700];
-  String _writeTempo = '00:00';
+  String _writeTempo = '00:00:00';
   bool _cronometroAttivo = false;
   bool _inPausa = false;
 
@@ -25,7 +25,7 @@ class _CronometroState extends State<Cronometro> {
   Stream<int> incrementa() async*{
     _cronometroAttivo = true;
     _coloreBookmarkButton = Colors.red[900];
-    yield* Stream.periodic(Duration(seconds: 1), transform);
+    yield* Stream.periodic(Duration(milliseconds: 10), transform);
   }
 
   void cambiaIcona() {
@@ -46,7 +46,7 @@ class _CronometroState extends State<Cronometro> {
 
   void reset() {
     _subscription.cancel();
-    _writeTempo = '00:00';
+    _writeTempo = '00:00:00';
     _stringSegnalibro.clear();
     _bottoneSinistro = Icons.play_arrow;
     _cronometroAttivo = false;
@@ -110,22 +110,27 @@ class _CronometroState extends State<Cronometro> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           FloatingActionButton(
-            onPressed: () async{
+            onPressed: () {
               if(_cronometroAttivo == false){
-                setState(cambiaIcona); //per prevenire ritardo di 1 sec nel cambio dell'icona.
+                setState(cambiaIcona); //per prevenire ritardo di 10 msec nel cambio dell'icona.
                 _subscription = incrementa().listen((value){
                   setState(() {
-                    int minuti = (value / 60).truncate();
-                    int secondi = value % 60;
+                    int centisecondi = (((value/100) - (value/100).truncate())*100).truncate();
+                    int secondi = ((value / 100)%60).truncate();
+                    int minuti = (((value / 100)/60)%60).truncate();
 
                     if(minuti < 10 && secondi < 10)
-                      _writeTempo = '0$minuti:0$secondi';
+                      (centisecondi < 10) ? (_writeTempo = '0$minuti:0$secondi:0$centisecondi') 
+                                          : (_writeTempo='0$minuti:0$secondi:$centisecondi');
                     if(minuti < 10 && secondi >= 10)
-                      _writeTempo = '0$minuti:$secondi';
+                      (centisecondi < 10) ? (_writeTempo = '0$minuti:$secondi:0$centisecondi') 
+                                          : (_writeTempo='0$minuti:$secondi:$centisecondi');
                     if(minuti >= 10 && secondi <10)
-                      _writeTempo = '$minuti:0$secondi';
+                      (centisecondi < 10) ? (_writeTempo = '$minuti:0$secondi:0$centisecondi') 
+                                          : (_writeTempo='$minuti:0$secondi:$centisecondi');
                     if(minuti >= 10 && secondi >= 10)
-                      _writeTempo = '$minuti:$secondi';
+                      (centisecondi < 10) ? (_writeTempo = '$minuti:$secondi:0$centisecondi') 
+                                          : (_writeTempo='$minuti:$secondi:$centisecondi');
                   });
                 });
               }
