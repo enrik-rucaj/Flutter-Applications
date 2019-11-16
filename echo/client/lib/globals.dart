@@ -1,4 +1,4 @@
-library elimina.globals;
+library client.globals;
 import 'dart:io';
 
 
