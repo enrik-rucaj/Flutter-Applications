@@ -7,7 +7,6 @@ void main() {
   
 
   return runApp(MaterialApp(
-    //theme: globals.isDark? globals.darkMode : ThemeData.light(),
     home: Client()
   ));
 } 
