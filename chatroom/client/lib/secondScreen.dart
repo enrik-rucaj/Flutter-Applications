@@ -9,27 +9,35 @@ class Client2 extends StatefulWidget {
 
 class _Client2State extends State<Client2> {
   TextEditingController _text  = TextEditingController();
+  String _userName;
   String _testo;
+  bool _isUserName = true;
 
   @override
   void initState() {
     super.initState();
     globals.client.listen((data){
       setState(() {
-        //_testo = String.fromCharCodes(data).trim();
-        _testo = utf8.decode(data);
-        globals.messaggi.insert(0, _testo); 
-        globals.mioMessaggio.insert(0, false);
+        if(_isUserName){
+          _userName = utf8.decode(data);
+          _isUserName = false;
+        }
+        else{
+          _testo = utf8.decode(data);
+          globals.messaggi.insert(0, _testo); 
+          globals.userNames.insert(0, _userName);
+          globals.mioMessaggio.insert(0, false);
+          _isUserName = true;
+        }
       });
     });
   }
 
   void send() {
-    print(utf8.encode(_text.text));
-    print(utf8.decode(utf8.encode(_text.text)));
     globals.client.write(_text.text);
     setState(() {
       globals.messaggi.insert(0, _text.text); 
+      globals.userNames.insert(0, globals.userName.text);
       globals.mioMessaggio.insert(0, true); 
       _text.clear();
     });
@@ -43,84 +51,119 @@ class _Client2State extends State<Client2> {
         centerTitle: true,
         backgroundColor: Colors.red,
       ),
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            Expanded(
-              child: Container(
-                color: Colors.red,
-                child: ListView.builder(
-                  reverse: true,
-                  itemCount: globals.messaggi.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    if (globals.mioMessaggio[index] == true) {
-                      return Column(
-                        children: <Widget>[
-                          Row(
-                            children: <Widget>[
-                              SizedBox(width: 60,),
-                              Expanded(
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: <Widget>[
-                                    Text(globals.messaggi[index],
-                                    ),
-                                  ],
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            child: Container(
+              color: Colors.red,
+              child: ListView.builder(
+                reverse: true,
+                itemCount: globals.messaggi.length,
+                itemBuilder: (BuildContext context, int index) {
+                  if (globals.mioMessaggio[index] == true) {
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: <Widget>[
+                        Stack(
+                          children: <Widget>[
+                            Container(
+                              padding: EdgeInsets.fromLTRB(97, 15, 10, 7),
+                              margin: EdgeInsets.fromLTRB(60, 5, 5, 5),
+                              decoration: BoxDecoration(
+                                color: Colors.greenAccent,
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(5.0),
+                                  bottomLeft: Radius.circular(5.0),
+                                  bottomRight: Radius.circular(10.0),
+                                )
+                              ),
+                              child: Text(globals.messaggi[index],
+                                textAlign: TextAlign.end,
+                              ),
+                            ),
+                            Positioned(
+                              top: 5.0,
+                              left: 62.0,
+                              child: Text(globals.userNames[index],
+                                style: TextStyle(
+                                  fontSize: 10,
+                                  color: Colors.blueGrey,
                                 ),
                               ),
-                            ],
-                          ),
-                          SizedBox(height: 5,)
-                        ],
-                      );
-                    }
-                    else {
-                      return Column(
-                        children: <Widget>[
-                          Row(
-                            children: <Widget>[
-                              Expanded(
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(globals.messaggi[index]),
-                                  ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    );
+                  }
+                  else {
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Stack(
+                          children:<Widget>[
+                              Container(
+                              padding: EdgeInsets.fromLTRB(97, 15, 10, 7),
+                              margin: EdgeInsets.fromLTRB(5, 5, 60, 5),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(5.0),
+                                  bottomLeft: Radius.circular(10.0),
+                                  bottomRight: Radius.circular(5.0),
+                                )
+                              ),
+                              child: Text(globals.messaggi[index],
+                                textAlign: TextAlign.end,
+                              ),
+                            ),
+                            Positioned(
+                              top: 5.0,
+                              left: 6.0,
+                              child: Text("${globals.userNames[index]}",
+                                style: TextStyle(
+                                  fontSize: 10,
+                                  color: Colors.blueGrey,
                                 ),
                               ),
-                              SizedBox(width: 60,),
-                            ],
-                          ),
-                          SizedBox(height: 5,)
-                        ],
-                      );
-                    }
-                  },
-                ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    );
+                  }
+                },
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: TextField(
-                controller: _text,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  icon: Icon(Icons.computer, 
-                    color: Colors.purple[800],
-                  ),
-                  labelText: "Write Text",
-                  labelStyle: TextStyle(
-                    fontSize: 12.0,
-                    color: Colors.purple[600]
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Expanded(
+                  child: TextField(
+                    controller: _text,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      labelText: "Write Text",
+                      labelStyle: TextStyle(
+                        fontSize: 12.0,
+                        color: Colors.purple[600]
+                      ),
+                    ),
                   ),
                 ),
-              ),
+                FloatingActionButton(
+                  onPressed: send,
+                  child: Icon(Icons.send),
+                ),
+              ],
             ),
-            RaisedButton(
-              onPressed: send,
-              child: Text("Send"),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

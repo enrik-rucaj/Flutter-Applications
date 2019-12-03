@@ -1,42 +1,43 @@
 import 'dart:io';
 import 'dart:convert' show utf8;
 
-// USE ALSO netcat 127.0.0.1 3000
-
 // global variables
 
 ServerSocket server;
 List<ChatClient> clients = [];
 
-void main() {
-  ServerSocket.bind(InternetAddress.anyIPv4, 3000)
-    .then((ServerSocket socket) {
-       server = socket;
-       server.listen((client) {
-         handleConnection(client);
-       });
-    });
+void main() async{
+  server = await ServerSocket.bind(InternetAddress.anyIPv4, 3000);
+  server.listen((client) {
+    handleConnection(client);
+  });
 }
 
 void handleConnection(Socket client){
+  for(ChatClient c in clients){
+    if(c._socket.remoteAddress.address == client.remoteAddress.address){
+      clients.remove(c);
+      break;
+    }
+  }
+  
+  print(clients.length);
   print('Connection from '
-    '${client.remoteAddress.address}:${client.remotePort}');
+    '${client.remoteAddress.address}');
 
   clients.add(ChatClient(client));
 
-  client.write("Welcome to dart-chat! "
-    "There are ${clients.length - 1} other clients\n");
 }
 
 void removeClient(ChatClient client){
   clients.remove(client);
 }
 
-
 void distributeMessage(ChatClient client, String message){
   for (ChatClient c in clients) {
     if (c != client){
-      c.write(message + "\n");
+      c.writeUser(client._user);
+      c.write(message);
     }
   }
 }
@@ -45,8 +46,8 @@ void distributeMessage(ChatClient client, String message){
 
 class ChatClient {
   Socket _socket;
-  String get _address => _socket.remoteAddress.address;
-  int get _port => _socket.remotePort;
+  String _user;
+  bool _isUserName = true;
   
   ChatClient(Socket s){
     _socket = s;
@@ -56,20 +57,30 @@ class ChatClient {
   }
 
   void messageHandler(data){
-    String message = utf8.decode(data);
-    distributeMessage(this, '${_address}:${_port} Message: $message');
+    if(_isUserName){
+      _user = utf8.decode(data);
+      _isUserName = false;
+    }
+    else{
+      String message = utf8.decode(data);
+      distributeMessage(this, message);
+    }
   }
 
   void errorHandler(error){
-    print('${_address}:${_port} Error: $error');
+    print('$_user Error: $error');
     removeClient(this);
     _socket.close();
   }
 
   void finishedHandler() {
-    print('${_address}:${_port} Disconnected');
+    print('$_user Disconnected');
     removeClient(this);
     _socket.close();
+  }
+
+  void writeUser(String user){
+    _socket.write(user);
   }
 
   void write(String message){
