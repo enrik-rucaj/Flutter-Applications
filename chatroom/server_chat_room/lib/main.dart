@@ -21,7 +21,6 @@ void handleConnection(Socket client){
     }
   }
   
-  print(clients.length);
   print('Connection from '
     '${client.remoteAddress.address}');
 

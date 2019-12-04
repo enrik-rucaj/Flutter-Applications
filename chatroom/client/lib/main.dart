@@ -4,10 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:client/secondScreen.dart';
 
 void main() {
-  
-
   return runApp(MaterialApp(
-    //theme: globals.isDark? globals.darkMode : ThemeData.light(),
     home: Client()
   ));
 } 
