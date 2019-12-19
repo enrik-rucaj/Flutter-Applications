@@ -33,11 +33,20 @@ void removeClient(ChatClient client){
   clients.remove(client);
 }
 
-void distributeMessage(ChatClient client, String message){
+void distributeMessage(ChatClient client, String message) async{
   for (ChatClient c in clients) {
     if (c != client){
       c.writeUser(client._user);
-      c.write(message);
+      await Future.delayed(Duration(milliseconds: 10));
+      c.writeMessage(message);
+    }
+  }
+}
+
+void distributeImage(ChatClient client, List<int> image) async{
+  for (ChatClient c in clients) {
+    if (c != client){
+      c.writeImage(image);
     }
   }
 }
@@ -48,6 +57,7 @@ class ChatClient {
   Socket _socket;
   String _user;
   bool _isUserName = true;
+  bool _isImage = false;
   
   ChatClient(Socket s){
     _socket = s;
@@ -62,8 +72,17 @@ class ChatClient {
       _isUserName = false;
     }
     else{
-      String message = utf8.decode(data);
-      distributeMessage(this, message);
+        try {
+          String message = utf8.decode(data);
+          print(message);
+          print("TEST1@@@@@@@@@@@@@");
+          distributeMessage(this, message);
+        } catch (e) {
+          print(data);
+          print("TEST1@@@@@@@@@@@@@@@@");
+          print("TEST2@@@@@@@@@@@@@@@@");
+          distributeImage(this, data);
+        }
     }
   }
 
@@ -83,7 +102,11 @@ class ChatClient {
     _socket.write(user);
   }
 
-  void write(String message){
+  void writeMessage(String message){
     _socket.write(message);
+  }
+
+  void writeImage(List<int> image){
+    _socket.add(image);
   }
 }

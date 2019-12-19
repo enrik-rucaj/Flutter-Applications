@@ -2,9 +2,11 @@ import 'globals.dart' as globals;
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:client/secondScreen.dart';
+import 'package:camera/camera.dart';
 
-void main() {
-  
+Future<void> main() async {
+  final cameras = await availableCameras();
+  globals.camera = cameras.first;
 
   return runApp(MaterialApp(
     //theme: globals.isDark? globals.darkMode : ThemeData.light(),
@@ -59,6 +61,7 @@ class _ClientState extends State<Client> {
       globals.messaggi.clear();
       globals.mioMessaggio.clear();
       globals.userNames.clear();
+      globals.isImage.clear();
       _userIcon = null;
       _ipIcon = null;
       globals.userName.clear();
