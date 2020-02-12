@@ -21,4 +21,4 @@ e quindi
         builder: (BuildContext context, AsyncSnapshot<TaskDao> snapshot) {
         ...
 ```
-Per il `FutureBuiler` [qui](https://api.flutter.dev/flutter/widgets/FutureBuilder-class.html).
+Per il `FutureBuiler` [qui](https://api.flutter.dev/flutter/widgets/FutureBuilder-class.html)
