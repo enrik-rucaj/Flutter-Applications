@@ -5,10 +5,10 @@ class Task {
   
   @primaryKey
   final int id;
-
   final String message;
+  final int rating;
 
-  Task(this.id, this.message);
+  Task(this.id, this.message, this.rating);
 
   @override
   bool operator ==(Object other) =>
@@ -16,7 +16,8 @@ class Task {
           other is Task &&
               runtimeType == other.runtimeType &&
               id == other.id &&
-              message == other.message;
+              message == other.message &&
+              rating == other.rating;
 
   // for == operator and Dismissible, ^: exclusive-or operator
   @override
@@ -24,6 +25,6 @@ class Task {
 
   @override
   String toString() {
-    return 'Task{id: $id, message: $message}';
+    return 'Task{id: $id, message: $message, rating: $rating}';
   }
 }

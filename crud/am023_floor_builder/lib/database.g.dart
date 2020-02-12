@@ -125,7 +125,7 @@ class _$TaskDao extends TaskDao {
   final QueryAdapter _queryAdapter;
 
   static final _taskMapper = (Map<String, dynamic> row) =>
-      Task(row['id'] as int, row['message'] as String);
+      Task(row['id'] as int, row['message'] as String, row['rating'] as int);
 
   final InsertionAdapter<Task> _taskInsertionAdapter;
 

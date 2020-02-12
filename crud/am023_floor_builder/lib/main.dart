@@ -66,6 +66,7 @@ class TasksWidget extends StatelessWidget {
                 return ListView.builder(
                   itemCount: tasks.length,
                   itemBuilder: (BuildContext context, int index) {
+                    print("@@@@@@@@@@@@@@@@@@@@@@@ò + ${tasks[index].message} + ${tasks[index].rating}");
                     return ListCell(
                       task: tasks[index],
                       dao: dao,
@@ -86,7 +87,8 @@ class TasksWidget extends StatelessWidget {
             ),
             onSubmitted: (input) async {
               final message = _textEditingController.text;
-              final task = Task(null, message);
+              final task = Task(null, message, 1);
+              print("@@@@@@@@ ${task.message} + ${task.rating}");
               await dao.insertTask(task);
 
               _textEditingController.clear();
