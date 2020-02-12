@@ -11,7 +11,7 @@ class FloorApp extends StatelessWidget {
 
   Future<TaskDao> _getDao() async {
     final database = await $FloorAppDatabase
-      .databaseBuilder('flutter_database.db')
+      .databaseBuilder('flutter_database2.db')
       .build();
     return database.taskDao;
   }

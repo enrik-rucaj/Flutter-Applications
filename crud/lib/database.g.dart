@@ -81,7 +81,7 @@ class _$AppDatabase extends AppDatabase {
       },
       onCreate: (database, version) async {
         await database.execute(
-            'CREATE TABLE IF NOT EXISTS `Task` (`id` INTEGER, `message` TEXT, PRIMARY KEY (`id`))');
+            'CREATE TABLE IF NOT EXISTS `Task` (`id` INTEGER, `message` TEXT, `rating` INTEGER, PRIMARY KEY (`id`))');
 
         await callback?.onCreate?.call(database, version);
       },
@@ -100,22 +100,31 @@ class _$TaskDao extends TaskDao {
         _taskInsertionAdapter = InsertionAdapter(
             database,
             'Task',
-            (Task item) =>
-                <String, dynamic>{'id': item.id, 'message': item.message},
+            (Task item) => <String, dynamic>{
+                  'id': item.id,
+                  'message': item.message,
+                  'rating': item.rating
+                },
             changeListener),
         _taskUpdateAdapter = UpdateAdapter(
             database,
             'Task',
             ['id'],
-            (Task item) =>
-                <String, dynamic>{'id': item.id, 'message': item.message},
+            (Task item) => <String, dynamic>{
+                  'id': item.id,
+                  'message': item.message,
+                  'rating': item.rating
+                },
             changeListener),
         _taskDeletionAdapter = DeletionAdapter(
             database,
             'Task',
             ['id'],
-            (Task item) =>
-                <String, dynamic>{'id': item.id, 'message': item.message},
+            (Task item) => <String, dynamic>{
+                  'id': item.id,
+                  'message': item.message,
+                  'rating': item.rating
+                },
             changeListener);
 
   final sqflite.DatabaseExecutor database;
