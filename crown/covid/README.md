@@ -1,4 +1,4 @@
-# covid
+# **COVID**
 
 L'applicazione ottiene dei dati JSON da internet per alla fine mostrarli a schermo.
 
