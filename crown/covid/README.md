@@ -32,5 +32,5 @@ Per potter usare i dati in formato Json si fa uso di tre *url* diversi:
 *  https://corona.lmao.ninja/v2/continents/ *per ottenere le informazioni sui vari continenti*
 *  https://corona.lmao.ninja/v2/all/ *per ottenere le informazioni a livello globale*
 
-Nel file **ui/country_list.dart** poi è presente un FloatingActionButton() widget che se premuto apre un link esterno sul browser
+Nel file **ui/country_list.dart** poi è presente un FloatingActionButton() widget che se premuto apre un link esterno sul browser: 'https://www.google.com/search?q=coronavirus&oq=coronavirus&aqs=chrome..69i57j35i39j0j69i60l2.2117j0j4&client=ms-android-xiaomi-rev1&sourceid=chrome-mobile&ie=UTF-8'
 
