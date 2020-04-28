@@ -11,6 +11,7 @@ In questo file ci sarà tutto il codice inerente al primo livello. Esso consiste
 
 Mentre in questo ci sarà il codice inerente al secondo livello, che consiste nel trascinare delle immagini nei corrispettivi target a grandezza diversa.
 
+
 In entrambi i file si fa uso di un timer che conta il tempo passato attraverso uno **Stream.periodic()**.
 In questi file c'è poi una variabile score, rappresentante il punteggio, che aumenta di 10 se il draggable è corretto e diminuisce di 5 se non è corretto invece.
 
