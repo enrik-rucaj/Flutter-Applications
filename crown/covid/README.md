@@ -24,3 +24,13 @@ I file utili per poter ottenere e usare i dati JSON sono:
 *  tutti i file presenti nella cartella **models/...**
 
 I dati così ottenuti verranno immagazzinati nella cartella **repository/repository.dart** e poi verranno utilizzati dal bloc.
+
+## Link esterni
+
+Per potter usare i dati in formato Json si fa uso di tre *url* diversi:
+*  https://corona.lmao.ninja/v2/countries/ *per ottenere le informazioni sulle varie nazioni*
+*  https://corona.lmao.ninja/v2/continents/ *per ottenere le informazioni sui vari continenti*
+*  https://corona.lmao.ninja/v2/all/ *per ottenere le informazioni a livello globale*
+
+Nel file **ui/country_list.dart** poi è presente un FloatingActionButton() widget che se premuto apre un link esterno sul browser
+
