@@ -21,3 +21,6 @@ dell'intero Scaffold Widget.
 
 I file utili per poter ottenere e usare i dati JSON sono:
 *  repository/covid_apiProvider.dart
+*  tutti i file presenti nella cartella **models/...**
+
+I dati così ottenuti verranno immagazzinati nella cartella **repository/repository.dart** e poi verranno utilizzati dal bloc.
