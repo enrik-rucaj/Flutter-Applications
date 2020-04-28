@@ -1,16 +1,12 @@
 # covid
 
-A new Flutter project.
+L'applicazione ottiene dei dati JSON da internet per alla fine mostrarli a schermo.
 
-## Getting Started
+Dato che è stato implementato il bloc pattern è utile distinguere i file appartenenti al backend(componente logia) e forend(interfaccia).
 
-This project is a starting point for a Flutter application.
+## Forend
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+I file utili per costruire l'interfaccia dell'App sono:
+*  main.dart
+*  app.dart
+*  ui/
