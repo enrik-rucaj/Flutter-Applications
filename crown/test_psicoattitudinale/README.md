@@ -1,16 +1,21 @@
-# test_psicoattitudinale
+# Test Psicoattitudinale
 
-A new Flutter project.
+L'app è abbastanza semplice. Si fanno uso dei widget Draggable e DragTarget per potere spostare delle immagini.
+Ci sono in totale due livelli e una volta finito uno si passa all'altro livello.
 
-## Getting Started
+## first_screen.dart
 
-This project is a starting point for a Flutter application.
+In questo file ci sarà tutto il codice inerente al primo livello. Esso consiste nel trascinare delle immagini verso i loro corrispettivi colori
 
-A few resources to get you started if this is your first Flutter project:
+## second_screen.dart
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Mentre in questo ci sarà il codice inerente al secondo livello, che consiste nel trascinare delle immagini nei corrispettivi target a grandezza diversa.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+In entrambi i file si fa uso di un timer che conta il tempo passato attraverso uno **Stream.periodic()**.
+In questi file c'è poi una variabile score, rappresentante il punteggio, che aumenta di 10 se il draggable è corretto e diminuisce di 5 se non è corretto invece.
+
+Per fare in modo che alla fine di uno screen si passi all'altro, si fa uso di uno StreamBuilder al quale arriverà un evento boolean.
+Lo StreamBuilder si trova nel **main.dart**.
+
+

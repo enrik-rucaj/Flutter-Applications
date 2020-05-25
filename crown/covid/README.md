@@ -1,16 +1,36 @@
-# covid
+# **COVID**
 
-A new Flutter project.
+L'applicazione ottiene dei dati JSON da internet per alla fine mostrarli a schermo.
 
-## Getting Started
+Dato che è stato implementato il bloc pattern è utile distinguere i file appartenenti al backend(componente logia) e forend(interfaccia).
 
-This project is a starting point for a Flutter application.
+## Forend
 
-A few resources to get you started if this is your first Flutter project:
+I file utili per costruire l'interfaccia dell'App sono:
+*  main.dart
+*  app.dart
+*  **ui/appBar_widget.dart**
+*  **ui/body_widget.dart**
+*  **ui/drawer_widget.dart**
+*  ui/country_list.dart
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Le app importanti a cui dobbiamo concentrarci sono le prime 3 della cartella ui/ elencata di sopra. Esse infatti andranno a costruire ciascun componente
+dell'intero Scaffold Widget.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Backend
+
+I file utili per poter ottenere e usare i dati JSON sono:
+*  repository/covid_apiProvider.dart
+*  tutti i file presenti nella cartella **models/...**
+
+I dati così ottenuti verranno immagazzinati nella cartella **repository/repository.dart** e poi verranno utilizzati dal bloc.
+
+## Link esterni
+
+Per potter usare i dati in formato Json si fa uso di tre *url* diversi:
+*  https://corona.lmao.ninja/v2/countries/ *per ottenere le informazioni sulle varie nazioni*
+*  https://corona.lmao.ninja/v2/continents/ *per ottenere le informazioni sui vari continenti*
+*  https://corona.lmao.ninja/v2/all/ *per ottenere le informazioni a livello globale*
+
+Nel file **ui/country_list.dart** poi è presente un FloatingActionButton() widget che se premuto apre un link esterno sul browser: 'https://www.google.com/search?q=coronavirus&oq=coronavirus&aqs=chrome..69i57j35i39j0j69i60l2.2117j0j4&client=ms-android-xiaomi-rev1&sourceid=chrome-mobile&ie=UTF-8'
+
