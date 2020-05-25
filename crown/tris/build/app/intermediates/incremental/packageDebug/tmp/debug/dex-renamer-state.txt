@@ -1,0 +1,4 @@
+#Sun May 24 21:09:10 CEST 2020
+base.0=/home/enrik/Scrivania/tris/build/app/intermediates/transforms/dexMerger/debug/0
+renamed.0=classes.dex
+path.0=classes.dex

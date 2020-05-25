@@ -1,0 +1,153 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:1:1-33:12
+INJECTED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:1:1-33:12
+INJECTED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:1:1-33:12
+INJECTED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:1:1-33:12
+MERGED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:1:1-33:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/8173aa9416dfeff872cfc149c4c04a24/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/6d66f76f7b6935e3a59cbdbfe1e880c9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/bf66537ee7bc9a506cfe04541aef2c83/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/4a8f12dfa86120f597696d600f8ef78b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/4b575198631e76e03ffb82a0774b47fc/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/4b4e88c9e0492504ff24d2d30121c431/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/0d52a4e4a3be4df3e22987ba649f02cb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/16cccab112a413c42ef0bb53d3945960/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/06adf530005fbad70a4dda4bb38eb5b0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/236baddfda6fa58d9022a3817332aca5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/d33632e7e4ac9551cf0d2718057ba6fd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8852e9c2e51316313c0bed0de62d16ed/AndroidManifest.xml:17:1-24:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/enrik/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/f278e32ed731019d5ce7b3ebe8f77b87/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/enrik/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/4f97dbf8f19856b744919f4b671ebc06/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/enrik/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/584e02dead6fa5e4760f536b3dc77b43/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/enrik/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/f9028423ff4540ad3b7b9521183b58c7/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/enrik/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/3d399baeb40033a392b7071323e2c4f0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/3f6c4eecee3a0c55ea3b2058837837ff/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/37985d01fac92eccbe588c03893937dc/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/fc03efce28585a8afe80d3628da8abcd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/5be51a130fed66b4764de4e2fc10f33b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/9c54184cf3db19ec69917a4fdd246f5a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/ff49cb80c55d8b7af0dbf9bceb0ad661/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/enrik/Scrivania/tris/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /home/enrik/Scrivania/tris/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /home/enrik/Scrivania/tris/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:2:5-38
+		INJECTED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/enrik/Scrivania/tris/android/app/src/debug/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:1:1-33:12
+		INJECTED from /home/enrik/Scrivania/tris/android/app/src/debug/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:1:1-33:12
+		INJECTED from /home/enrik/Scrivania/tris/android/app/src/debug/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:1:11-69
+application
+ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:9:5-32:19
+MERGED from [com.android.support:support-compat:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8852e9c2e51316313c0bed0de62d16ed/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8852e9c2e51316313c0bed0de62d16ed/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/3f6c4eecee3a0c55ea3b2058837837ff/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/3f6c4eecee3a0c55ea3b2058837837ff/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8852e9c2e51316313c0bed0de62d16ed/AndroidManifest.xml:22:18-91
+	android:label
+		ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:11:9-36
+	android:icon
+		ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:12:9-43
+	android:name
+		ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:10:9-57
+activity#com.example.tic_tac_toe.MainActivity
+ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:13:9-31:20
+	android:launchMode
+		ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:15:13-43
+	android:hardwareAccelerated
+		ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:18:13-47
+	android:windowSoftInputMode
+		ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:19:13-55
+	android:configChanges
+		ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:17:13-144
+	android:theme
+		ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:16:13-47
+	android:name
+		ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:14:13-41
+meta-data#io.flutter.app.android.SplashScreenUntilFirstFrame
+ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:24:13-26:40
+	android:value
+		ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:26:17-37
+	android:name
+		ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:25:17-82
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:27:13-30:29
+action#android.intent.action.MAIN
+ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:28:17-68
+	android:name
+		ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:28:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:29:17-76
+	android:name
+		ADDED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml:29:27-74
+uses-sdk
+INJECTED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:support-fragment:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/8173aa9416dfeff872cfc149c4c04a24/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/8173aa9416dfeff872cfc149c4c04a24/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/6d66f76f7b6935e3a59cbdbfe1e880c9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/6d66f76f7b6935e3a59cbdbfe1e880c9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/bf66537ee7bc9a506cfe04541aef2c83/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/bf66537ee7bc9a506cfe04541aef2c83/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/4a8f12dfa86120f597696d600f8ef78b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/4a8f12dfa86120f597696d600f8ef78b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/4b575198631e76e03ffb82a0774b47fc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/4b575198631e76e03ffb82a0774b47fc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/4b4e88c9e0492504ff24d2d30121c431/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/4b4e88c9e0492504ff24d2d30121c431/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/0d52a4e4a3be4df3e22987ba649f02cb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/0d52a4e4a3be4df3e22987ba649f02cb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/16cccab112a413c42ef0bb53d3945960/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/16cccab112a413c42ef0bb53d3945960/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/06adf530005fbad70a4dda4bb38eb5b0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/06adf530005fbad70a4dda4bb38eb5b0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/236baddfda6fa58d9022a3817332aca5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/236baddfda6fa58d9022a3817332aca5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/d33632e7e4ac9551cf0d2718057ba6fd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/d33632e7e4ac9551cf0d2718057ba6fd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8852e9c2e51316313c0bed0de62d16ed/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8852e9c2e51316313c0bed0de62d16ed/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/enrik/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/f278e32ed731019d5ce7b3ebe8f77b87/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/enrik/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/f278e32ed731019d5ce7b3ebe8f77b87/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/enrik/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/4f97dbf8f19856b744919f4b671ebc06/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/enrik/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/4f97dbf8f19856b744919f4b671ebc06/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/enrik/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/584e02dead6fa5e4760f536b3dc77b43/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/enrik/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/584e02dead6fa5e4760f536b3dc77b43/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/enrik/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/f9028423ff4540ad3b7b9521183b58c7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/enrik/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/f9028423ff4540ad3b7b9521183b58c7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/enrik/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/3d399baeb40033a392b7071323e2c4f0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/enrik/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/3d399baeb40033a392b7071323e2c4f0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/3f6c4eecee3a0c55ea3b2058837837ff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/3f6c4eecee3a0c55ea3b2058837837ff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/37985d01fac92eccbe588c03893937dc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/37985d01fac92eccbe588c03893937dc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/fc03efce28585a8afe80d3628da8abcd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/fc03efce28585a8afe80d3628da8abcd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/5be51a130fed66b4764de4e2fc10f33b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/5be51a130fed66b4764de4e2fc10f33b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/9c54184cf3db19ec69917a4fdd246f5a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/9c54184cf3db19ec69917a4fdd246f5a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/ff49cb80c55d8b7af0dbf9bceb0ad661/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/enrik/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/ff49cb80c55d8b7af0dbf9bceb0ad661/AndroidManifest.xml:20:5-44
+INJECTED from /home/enrik/Scrivania/tris/android/app/src/debug/AndroidManifest.xml
+INJECTED from /home/enrik/Scrivania/tris/android/app/src/debug/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/enrik/Scrivania/tris/android/app/src/debug/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/enrik/Scrivania/tris/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/enrik/Scrivania/tris/android/app/src/debug/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /home/enrik/Scrivania/tris/android/app/src/debug/AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from /home/enrik/Scrivania/tris/android/app/src/debug/AndroidManifest.xml:6:22-64
