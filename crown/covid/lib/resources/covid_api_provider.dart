@@ -21,7 +21,7 @@ class ApiProvider {
       throw Exception('Failed to load post');
   }
 
-  Future<ItmeModelCriptovaluta> fetchContinentList() async {
+  Future<ItmeModelCriptovaluta> fetchCriptoValuta() async {
     final response = await client.get("https://www.mysite.it/api/criptovalute/$criptoValuta/$ultimiDati");
     if (response.statusCode == 200)
       return ItmeModelCriptovaluta.fromJson(json.decode(response.body));
