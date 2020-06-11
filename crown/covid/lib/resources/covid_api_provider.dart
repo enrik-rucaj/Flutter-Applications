@@ -9,7 +9,9 @@ import '../models/item_model_criptovaluta.dart';
 class ApiProvider {
   Client client = Client();
   const ultimiDati = 0;
-  int criptoValuta = 0;
+  final int criptoValuta;
+  
+  ApiProvider(this.criptoValuta);
 
   Future<ItemModelListaCriptovalute> fetchCriptoValuteList() async {
     final response = await client.get("https://www.mysite.it/api/criptovalute/");
